@@ -112,7 +112,13 @@ public class GerenciarFuncionario extends HttpServlet {
                 if (!id.isEmpty()) {
                     try {
                         f.setId(Integer.parseInt(id));
-                        if (!fDAO.update(f)) {
+                        f.setDataNasc(Date.valueOf(dataNasc));
+                        f.setCpf(cpf);
+                        f.setTel(tel);
+                        f.setMatricula(matricula);
+                        if (fDAO.gravar(f)) {
+                            mensagem = "Funcionario gravado com sucesso !";
+                        }else{
                             mensagem = "Erro ao atualizar funcionário!";
                         }
                     } catch (NumberFormatException e) {
