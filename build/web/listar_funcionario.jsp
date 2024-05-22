@@ -18,6 +18,16 @@
         <link rel="stylesheet" href="bootstrap/bootstrap-theme.min.css">
         <link rel="stylesheet" href="datatables/datatables.min.css">
         <title>Crud funcionário</title>
+        <script>
+            
+            function confirmarExclusao(id, nome, dataNasc, cpf, tel, matricula){
+                if(confirm('Deseja realmente excluir o funcionário '+nome+' ?')){
+                    localhost.href='gerenciar_funcionario.do?acao=deletar&id='+id;        
+                }else{
+                    alert('Não encontrado !')
+                }
+            }
+        </script>
     </head>
     <body>
         <div class="container">
@@ -61,7 +71,7 @@
                         <a class="btn btn-primary" href="gerenciar_funcionario.do?acao=alterar&id=${f.id}">
                             <i class="glyphicon glyphicon-pencil"></i>
                         </a>
-                        <button class="btn btn-danger">
+                        <button class="btn btn-danger" onclick="confirmarExclusao('${f.id}','${f.nome}','${f.dataNasc}','${f.cpf}','${f.tel}','${f.matricula}')">
                             <i class="glyphicon glyphicon-trash"></i>
                         </button>
                     </td>

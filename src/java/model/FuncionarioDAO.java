@@ -98,8 +98,21 @@ public class FuncionarioDAO extends DatabaseDAO{
         return f;
     }
 
-    public boolean update(Funcionario f) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean deletar(Funcionario f){
+        
+        try{
+            this.conectar();
+            String sql = "DELETE FROM funcionario WHERE id=?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1, f.getId());
+            ps.execute();
+            this.desconectar();
+            return true;
+        }catch(Exception e){
+            System.out.println(e);
+            return false;
+        }
+        
     }
     
     

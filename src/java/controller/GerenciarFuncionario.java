@@ -62,6 +62,15 @@ public class GerenciarFuncionario extends HttpServlet {
                 }else{
                     mensagem = "Funcionário não encontrado";
                 }
+            } 
+            
+            if(acao.equals("deletar")){
+                f.setId(Integer.parseInt(id));
+                if(fDAO.deletar(f)){
+                    mensagem = "Funcionário deletado com sucesso !";
+                }else{
+                    mensagem = "Erro ao excluir o funcionário !";
+                }
             }
             
         }catch(Exception e){
