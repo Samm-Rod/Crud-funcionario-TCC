@@ -1,4 +1,4 @@
-Crud funcionário TCC 
+**Crud funcionário TCC**
 Funcões disponíveis 
 Create (gravar)
 ![cadastrar](https://github.com/Samm-Rod/Crud-funcionario-TCC/assets/86389730/41d6c345-e532-45db-b6c9-b51d8b1ac426)
