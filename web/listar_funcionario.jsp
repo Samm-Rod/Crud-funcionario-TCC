@@ -22,7 +22,7 @@
             
             function confirmarExclusao(id, nome, dataNasc, cpf, tel, matricula){
                 if(confirm('Deseja realmente excluir o funcionário '+nome+' ?')){
-                    localhost.href='gerenciar_funcionario.do?acao=deletar&id='+id;        
+                    location.href='gerenciar_funcionario.do?acao=deletar&id='+id;        
                 }else{
                     alert('Não encontrado !')
                 }
@@ -32,7 +32,7 @@
     <body>
         <div class="container">
             <%@include  file="menu.jsp"%>
-            <h1>Crud funcionário<h1>
+            <h1>Crud funcionário</h1>
                     
             <a href="form_funcionario.jsp" class="btn btn-primary">Novo Cadastro</a>       
             <table class="table table-hover table-striped table-bordered display" id="listarFuncionario">

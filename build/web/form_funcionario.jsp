@@ -16,7 +16,7 @@
     <body>
         <div class="container">
             <%@include  file="menu.jsp"%>
-            <h1>Cadastrar funcionário<h1>   
+            <h1>Cadastrar funcionário</h1>   
             <form action="gerenciar_funcionario.do" method="POST">
                 <input type="hidden" name="id" value="${funcionario.id}"/>
                 <div class="row">
@@ -29,7 +29,7 @@
                 <div class="row">
                     <div class="form-group col-sm-8">
                         <label for="dataNasc" class="control-label">Data Nascimento</label>
-                        <input type="date" name="dataNasc" class="form-control" id="dataNasc" required="" value="${funcionario.dataNasc}"/>
+                        <input type="date" name="dataNasc" class="form-control" id="dataNasc"  value="${funcionario.dataNasc}"/>
                     </div>
                 </div>
                 

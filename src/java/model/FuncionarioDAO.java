@@ -53,7 +53,7 @@ public class FuncionarioDAO extends DatabaseDAO{
             this.conectar();
             
             if(f.getId() == 0){
-                sql = "INSERT INTO funcionario (nome, dataNasc, cpf, tel, matricula) VALUES (?,?,?,?,?)";
+                sql = "INSERT INTO funcionario(nome, dataNasc, cpf, tel, matricula) VALUES (?,?,?,?,?)";
             }else{
                 sql = "UPDATE funcionario SET nome=?, dataNasc=?, cpf=?, tel=?, matricula=? WHERE id=?";
             }
